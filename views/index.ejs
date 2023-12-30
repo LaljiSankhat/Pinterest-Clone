@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% include ./partials/header.ejs %>
+  <div class="w-full h-screen bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWJzdHJhY3R8ZW58MHx8MHx8fDA%3D')] flex items-center justify-center">
+    <div class="w-[30vw]  bg-white px-20 py-10 rounded-[30px]">
+      <h1 class="text-3xl text-center font-semibold text-zinc-700 capitalize leading-none">welcome to pinterest</h1>
+      <form action="/login" method="post">
+        <input class="border-2 h-2 rounded-md block w-full mt-2 px-3 py-5 " type="text" name="username" placeholder="username">
+        <input class="border-2 h-2 rounded-md block w-full mt-2 px-3 py-5 " type="password" name="password" placeholder="password">
+        <a href="#" class="mt-2 font-semibold text-zinc-700 inline-block">forgot password ?</a>
+        <input class="border-2 h-10 text-center block w-full mt-2 px-3 py-1 bg-red-600 rounded-full" type="submit" name="submit" value="Login">
+        <p class="text-xs font-semibold text-zinc-700 mt-7 w-3/4 mx-auto text-center">By continuing, you agree to Pinterst's <strong>Terms of Service</strong> and acknowledge that you've read our <strong>Privacy Policy Notice at collecton</strong></p>
+      </form>
+      <a class="inline-block mt-7 text-sm font-semibold text-zinc-700 text-center w-full" href="/register">Dont have an account ? </a>
+    </div>
+  </div>
+<% include ./partials/footer.ejs %>
